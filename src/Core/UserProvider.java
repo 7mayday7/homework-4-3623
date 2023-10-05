@@ -1,5 +1,7 @@
 package Core;
 
+import Interfaces.ICarrierRepo;
+import Interfaces.ICashRepo;
 import Interfaces.IUserRepo;
 import Models.User;
 import Services.UserRepository;
@@ -10,7 +12,6 @@ import java.util.List;
  * Класс - провайдер для работы с базой данных клиентов
  */
 public class UserProvider {
-    private IUserRepo clientRepository;
 
     /**
      * Конструктор класса

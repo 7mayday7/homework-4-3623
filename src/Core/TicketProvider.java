@@ -11,6 +11,8 @@ import java.util.List;
  */
 public class TicketProvider {
 
+    private ITicketRepo ticketRepo;
+
     public TicketProvider() {
         // Класс репозитория находится в единственном экземпляре для того, чтобы не создавать несколько подключений
         // к базе данных. Реализация паттерна Синглтон.
@@ -24,6 +26,9 @@ public class TicketProvider {
      * @return список билетов
      * @throws RuntimeException
      */
+    public List<Ticket> getTicket(int routeNumber) {
+        return ticketRepo.readAll(routeNumber);
+    }
 
 
     /**
@@ -32,5 +37,9 @@ public class TicketProvider {
      * @param ticket билет
      * @return результат выполнения операции
      */
+    public boolean updateTicket(Ticket ticket) {
+        ticket.setValid(false);
+        return ticketRepo.update(ticket);
+    }
 
 }
