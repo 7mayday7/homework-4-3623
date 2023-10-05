@@ -7,7 +7,12 @@ import java.util.Objects;
  */
 public class User {
 
-
+    private int id;
+    private String userName;
+    private int hashPassword;
+    private int phone;
+    private List<String> benefits;
+    private long cardNumber;
 
     public User(int id, String userName, int hashPassword, long cardNumber) {
         this.id = id;
@@ -41,5 +46,29 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(id, userName, hashPassword, cardNumber);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public int getHashPassword() {
+        return hashPassword;
+    }
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public List<String> getBenefits() {
+        return benefits;
+    }
+
+    public long getCardNumber() {
+        return cardNumber;
     }
 }

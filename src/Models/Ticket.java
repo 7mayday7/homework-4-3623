@@ -7,7 +7,15 @@ import java.util.Date;
  */
 public class Ticket{
 
-
+    private long id;
+    private int price;
+    private Date date;
+    private int zoneStart;
+    private int zoneStop;
+    private short type;
+    private int routeNumber;
+    private int place;
+    private boolean isValid;
 
     public Ticket(int routeNumber, int place, int price, Date date, boolean isValid) {
         this.routeNumber = routeNumber;
@@ -63,5 +71,53 @@ public class Ticket{
             return true;
         }
         return false;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public int getZoneStart() {
+        return zoneStart;
+    }
+
+    public int getZoneStop() {
+        return zoneStop;
+    }
+
+    public short getType() {
+        return type;
+    }
+
+    public int getRouteNumber() {
+        return routeNumber;
+    }
+
+    public int getPlace() {
+        return place;
+    }
+
+    public boolean isValid() {
+        return isValid;
+    }
+
+    public void setZoneStart(int zoneStart) {
+        this.zoneStart = zoneStart;
+    }
+
+    public void setZoneStop(int zoneStop) {
+        this.zoneStop = zoneStop;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
     }
 }
